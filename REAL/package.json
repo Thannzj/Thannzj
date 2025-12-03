@@ -1,0 +1,12 @@
+{
+  "name": "mount-malindang-site",
+  "version": "1.0.0",
+  "description": "Interactive biodiversity site for Mount Malindang with shared comments",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["biodiversity", "mount-malindang"],
+  "author": "",
+  "license": "ISC"
+}

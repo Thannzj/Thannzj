@@ -1,0 +1,1067 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+
+:root {
+    --primary-color: #006400;
+    --secondary-color: #4CAF50; 
+    --text-color: #333;
+    --background-color: #f8f8f8;
+    --card-bg: #ffffff;
+    --inverted-bg: #e0e0e0;
+    --header-bg: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    --primary-color: #006400;
+    --secondary-color: #4CAF50; 
+    --text-color: #333;
+    --background-color: #f8f8f8;
+    --card-bg: #ffffff;
+    --inverted-bg: #e0e0e0;
+    --header-bg: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-mode {
+    --primary-color: #4CAF50; 
+    --secondary-color: #81C784;
+    --text-color: #ffffff;
+    --background-color: #1a1a1a; 
+    --card-bg: #2d2d2d; 
+    --inverted-bg: #242424;
+    --header-bg: #1a1a1a;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.8);
+    
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-mode header,
+.dark-mode .card,
+.dark-mode .eco-card,
+.dark-mode footer {
+    box-shadow: none;
+}
+
+.dark-mode .card,
+.dark-mode .eco-card,
+.dark-mode figure,
+.dark-mode figcaption,
+.dark-mode #conservation li {
+    color: var(--text-color);
+}
+
+.dark-mode .cta-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+.dark-mode .cta-button:hover {
+    background-color: #66BB6A;
+}
+
+.dark-mode #ecosystems,
+.dark-mode #ecosystems h2,
+.dark-mode #ecosystems p {
+    color: var(--text-color);
+}
+
+.dark-mode #biodiversity,
+.dark-mode #species {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+}
+
+.dark-mode #biodiversity h2,
+.dark-mode #biodiversity p,
+.dark-mode #species h2,
+.dark-mode #species p {
+    color: var(--text-color);
+}
+
+.dark-mode #conservation {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+}
+
+.dark-mode #conservation h2,
+.dark-mode #conservation p {
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 15px 0;
+    border-bottom: 3px solid var(--primary-color);
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 8px 12px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s, background-color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav a.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+#mode-toggle {
+    background: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#mode-toggle:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--card-bg);
+}
+
+.hero-section {
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.hero-content a,
+.hero-content button {
+    pointer-events: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 3;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    padding: 0;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.hero-section h2 {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section p {
+    font-size: 1.4em;
+    margin-bottom: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.content-section {
+    padding: 80px 0;
+}
+
+.inverted-bg {
+    background-color: var(--inverted-bg);
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+/* Species Carousel Styling */
+.species-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-nav-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    touch-action: manipulation;
+}
+
+.carousel-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.carousel-nav-btn:active {
+    transform: scale(0.95);
+}
+
+.species-carousel {
+    flex: 1;
+    max-width: 1000px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track-species {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.species-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+figure {
+    width: 300px;
+    background-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.06),
+        inset 1px 0 0 0 rgba(255, 255, 255, 0.25),
+        inset -1px 0 0 0 rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    will-change: transform;
+    position: relative;
+    flex-shrink: 0;
+    touch-action: manipulation;
+}
+
+figure:hover {
+    transform: translateY(-6px) scale(1.02);
+    cursor: pointer;
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.06),
+        inset 1px 0 0 0 rgba(255, 255, 255, 0.25),
+        inset -1px 0 0 0 rgba(0, 0, 0, 0.08),
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+figcaption {
+    padding: 15px;
+}
+
+figcaption h3 {
+    color: var(--primary-color);
+}
+
+.ecosystem-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.eco-card {
+    flex: 1;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    will-change: transform;
+}
+
+.eco-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.eco-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.eco-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+#conservation ul {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+#conservation li {
+    background-color: var(--card-bg);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    will-change: transform;
+}
+
+#conservation li:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--inverted-bg);
+    font-size: 0.9em;
+}
+
+/* Responsive Design Breakpoints */
+@media (max-width: 900px) {
+    .nav-toggle {
+        display: inline-block;
+        order: -1;
+    }
+    
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--header-bg);
+        border-bottom: 3px solid var(--primary-color);
+        padding: 10px 0;
+        box-shadow: var(--shadow-light);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 999;
+        gap: 0;
+        margin-top: 0;
+    }
+    
+    nav.open ul {
+        max-height: 500px;
+    }
+
+    nav a {
+        padding: 12px 20px;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+        display: block;
+        text-align: left;
+    }
+    
+    nav a.active {
+        border-bottom: none;
+        border-left: 4px solid var(--primary-color);
+        background-color: rgba(76, 175, 80, 0.1);
+    }
+
+    header .container {
+        position: relative;
+    }
+    
+    .ecosystem-cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section {
+        height: 350px;
+        min-height: 350px;
+    }
+    
+    .hero-section h2 {
+        font-size: 2em;
+    }
+    
+    .hero-section p {
+        font-size: 1em;
+    }
+    
+    .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .species-carousel-wrapper {
+        gap: 10px;
+    }
+    
+    .carousel-track-species {
+        gap: 15px;
+    }
+    
+    .carousel-nav-btn {
+        font-size: 1.5em;
+        padding: 8px 12px;
+    }
+    
+    figure {
+        width: 280px;
+    }
+    
+    .eco-card {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.3em;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.8em;
+    }
+    
+    h3 {
+        font-size: 1em;
+    }
+    
+    .content-section {
+        padding: 40px 0;
+    }
+    
+    .hero-section {
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.2em;
+    }
+    
+    .hero-section p {
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    .carousel-btn {
+        font-size: 1.5em;
+        padding: 8px 12px;
+    }
+    
+    .carousel-btn.prev {
+        left: 10px;
+    }
+    
+    .carousel-btn.next {
+        right: 10px;
+    }
+    
+    .carousel-dots {
+        bottom: 10px;
+        gap: 8px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .species-carousel-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .carousel-nav-btn {
+        font-size: 1.3em;
+        padding: 6px 10px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    .carousel-track-species {
+        gap: 12px;
+    }
+    
+    figure {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    figure:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .eco-card {
+        padding: 20px;
+    }
+    
+    .eco-card img {
+        height: 150px;
+    }
+    
+    #conservation ul {
+        padding-left: 0;
+        max-width: 100%;
+    }
+    
+    #conservation li {
+        padding: 12px;
+        margin-bottom: 8px;
+        font-size: 0.95em;
+        border-left: 4px solid var(--primary-color);
+    }
+    
+    #conservation li:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .comments-section {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .comment-form .form-row {
+        margin-bottom: 10px;
+    }
+    
+    .comment-form input[type="text"],
+    .comment-form textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .stars {
+        gap: 8px;
+        font-size: 1.6rem;
+    }
+    
+    .star {
+        min-width: 36px;
+        min-height: 36px;
+    }
+    
+    .comment {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+    
+    .action-btn {
+        padding: 6px 8px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+    
+    .reply {
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+    }
+    
+    .reply-meta {
+        gap: 6px;
+        margin-bottom: 4px;
+        font-size: 0.85em;
+    }
+    
+    footer {
+        font-size: 0.85em;
+        padding: 15px 0;
+    }
+}
+
+.comments-section {
+    margin-top: 30px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.comment-form .form-row {
+    margin-bottom: 12px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.dark-mode .comment-form input[type="text"],
+.dark-mode .comment-form textarea {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-color: #555;
+}
+
+.dark-mode .comment-form input[type="text"]::placeholder,
+.dark-mode .comment-form textarea::placeholder {
+    color: #aaa;
+}
+
+.dark-mode .comment-form label {
+    color: var(--text-color);
+}
+
+.stars {
+    display: inline-flex;
+    gap: 6px;
+    font-size: 1.4rem;
+}
+
+.star {
+    user-select: none;
+    cursor: pointer;
+    color: #bbb;
+    transition: color 0.18s ease, transform 0.12s ease;
+}
+.star.filled { 
+    color: #FFD700;
+    transform: translateY(-2px);
+}
+
+.comments-list {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comment {
+    background-color: var(--card-bg);
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.comment .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+.comment .meta .name { font-weight: 700; color: var(--primary-color); }
+.comment .meta .rating { color: #FFD700; }
+
+.comment .actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.comment .text { color: var(--text-color); }
+
+.heart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.heart-btn.liked { color: #e25555; transform: scale(1.06); }
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 2px 4px;
+    transition: transform 0.18s ease;
+}
+.action-btn:hover {
+    transform: scale(1.1);
+}
+.action-btn.report-btn { color: #ff9800; }
+.action-btn.delete-btn { color: #f44336; }
+.action-btn.reply-btn { 
+    color: #2196F3; 
+    background-color: rgba(33, 150, 243, 0.08);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(33, 150, 243, 0.15);
+    transition: all 0.2s ease;
+}
+.action-btn.reply-btn:hover {
+    background-color: rgba(33, 150, 243, 0.15);
+    border-color: rgba(33, 150, 243, 0.3);
+    transform: scale(1.05);
+}
+
+.dark-mode .action-btn.reply-btn {
+    background-color: rgba(66, 165, 245, 0.12);
+    border-color: rgba(66, 165, 245, 0.25);
+}
+
+.dark-mode .action-btn.reply-btn:hover {
+    background-color: rgba(66, 165, 245, 0.2);
+}
+
+.replies-container {
+    margin-top: 12px;
+    padding-left: 16px;
+    border-left: 2px solid var(--primary-color);
+}
+
+.reply {
+    background-color: rgba(0,0,0,0.02);
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.reply-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+}
+
+.reply-name-time {
+    display: flex;
+    gap: 8px;
+}
+
+.reply-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.reply-time {
+    color: #999;
+    font-size: 0.85em;
+}
+
+.reply-text {
+    color: var(--text-color);
+    font-size: 0.95em;
+}
+
+.reply-actions {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.reply-heart {
+    font-size: 0.95rem !important;
+}
+
+.dark-mode .reply {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.cta-button.small { padding: 8px 14px; font-size: 0.95rem; border-radius: 6px; }
+
+.dark-mode .comments-section,
+.dark-mode .comment {
+    background-color: #2f2f2f;
+    color: var(--text-color);
+}
+
+.dark-mode .comment .meta .name { color: var(--primary-color); }

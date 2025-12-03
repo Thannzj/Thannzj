@@ -1,0 +1,318 @@
+/* Mobile and tablet carousel optimizations */
+
+/* Ultra-mobile (small phones ≤480px) */
+@media (max-width: 480px) {
+    .species-carousel-wrapper {
+        gap: 8px;
+        margin-top: 30px;
+    }
+    
+    .carousel-nav-btn {
+        font-size: 1.2em;
+        padding: 6px 8px;
+        min-width: 38px;
+        min-height: 38px;
+    }
+    
+    .carousel-track-species {
+        gap: 8px;
+        padding: 0 8px;
+    }
+    
+    figure {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 10px;
+        flex-basis: calc(100vw - 40px);
+    }
+    
+    figure img {
+        height: 160px;
+    }
+    
+    figcaption {
+        padding: 10px;
+    }
+    
+    figcaption h3 {
+        font-size: 0.9em;
+        margin-bottom: 4px;
+    }
+    
+    figcaption p {
+        font-size: 0.8em;
+        line-height: 1.3;
+    }
+    
+    h3[style*="text-align: center"] {
+        font-size: 1.2em !important;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Small phones (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+    .species-carousel-wrapper {
+        gap: 10px;
+        margin-top: 35px;
+    }
+    
+    .carousel-nav-btn {
+        font-size: 1.3em;
+        padding: 7px 10px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    .carousel-track-species {
+        gap: 12px;
+        padding: 0 10px;
+    }
+    
+    figure {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 11px;
+        flex-basis: calc(100vw - 60px);
+    }
+    
+    figure img {
+        height: 180px;
+    }
+    
+    figcaption {
+        padding: 12px;
+    }
+    
+    figcaption h3 {
+        font-size: 0.95em;
+        margin-bottom: 5px;
+    }
+    
+    figcaption p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+}
+
+/* Medium tablets (601px - 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .species-carousel-wrapper {
+        gap: 12px;
+        margin-top: 35px;
+    }
+    
+    .carousel-nav-btn {
+        font-size: 1.4em;
+        padding: 8px 11px;
+        min-width: 42px;
+        min-height: 42px;
+    }
+    
+    .carousel-track-species {
+        gap: 15px;
+        padding: 0 12px;
+    }
+    
+    figure {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 12px;
+        flex-basis: calc(50vw - 50px);
+    }
+    
+    figure img {
+        height: 200px;
+    }
+    
+    figcaption {
+        padding: 14px;
+    }
+    
+    figcaption h3 {
+        font-size: 1em;
+        margin-bottom: 6px;
+    }
+    
+    figcaption p {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+}
+
+/* Large tablets & landscape (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .species-carousel-wrapper {
+        gap: 15px;
+        margin-top: 40px;
+    }
+    
+    .carousel-nav-btn {
+        font-size: 1.6em;
+        padding: 8px 12px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .carousel-track-species {
+        gap: 18px;
+        padding: 0 15px;
+    }
+    
+    figure {
+        width: 280px;
+        flex-basis: 280px;
+    }
+    
+    figure img {
+        height: 210px;
+    }
+    
+    figcaption {
+        padding: 15px;
+    }
+    
+    figcaption h3 {
+        font-size: 1.05em;
+    }
+    
+    figcaption p {
+        font-size: 0.95em;
+    }
+}
+
+/* Desktop (1025px+) - no changes needed, uses default */
+
+/* Landscape orientation optimizations */
+@media (orientation: landscape) and (max-height: 600px) {
+    .species-carousel-wrapper {
+        margin-top: 20px;
+    }
+    
+    figure img {
+        height: 150px;
+    }
+    
+    figcaption {
+        padding: 8px;
+    }
+    
+    figcaption h3 {
+        font-size: 0.9em;
+        margin-bottom: 2px;
+    }
+    
+    figcaption p {
+        font-size: 0.75em;
+        line-height: 1.2;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    figure:active {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .carousel-nav-btn:active {
+        transform: scale(0.93);
+    }
+    
+    /* Reduce momentum scrolling issues */
+    .carousel-track-species {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+}
+
+/* High DPI screens (retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    figure {
+        box-shadow: 
+            inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+            inset 0 -1px 0 0 rgba(0, 0, 0, 0.04),
+            inset 1px 0 0 0 rgba(255, 255, 255, 0.2),
+            inset -1px 0 0 0 rgba(0, 0, 0, 0.06),
+            0 3px 8px rgba(0, 0, 0, 0.04);
+    }
+}
+
+/* Smooth scrolling for supported browsers */
+@supports (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* ======================================================
+   Single-card mobile readability improvements (≤600px)
+   - Make species card full-width, increase image height
+   - Use high-contrast caption background for readability
+   - Center carousel item and improve spacing
+   ====================================================== */
+@media (max-width: 600px) {
+    /* Ensure carousel container shows and centers one item */
+    .species-carousel {
+        padding: 0; /* remove extra padding */
+    }
+
+    .carousel-track-species {
+        justify-content: center;
+    }
+
+    /* Make each figure occupy most of the viewport for readability */
+    figure {
+        flex-basis: calc(100vw - 40px) !important;
+        max-width: calc(100vw - 40px) !important;
+        width: calc(100vw - 40px) !important;
+        margin: 0 auto !important;
+        border-radius: 12px;
+    }
+
+    /* Slightly taller images on small phones for better detail */
+    figure img {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    /* Caption: use near-opaque background with good contrast */
+    figcaption {
+        padding: 16px;
+        background: rgba(255,255,255,0.96);
+        color: #111;
+        box-shadow: 0 -8px 24px rgba(0,0,0,0.06) inset;
+        border-top: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .dark-mode figure figcaption {
+        background: rgba(12,12,12,0.7);
+        color: #fff;
+        border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    figcaption h3 {
+        font-size: 1.05em;
+        margin-bottom: 6px;
+    }
+
+    figcaption p {
+        font-size: 0.98em;
+        line-height: 1.45;
+    }
+
+    /* Larger interactive targets */
+    .carousel-nav-btn {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 8px 10px;
+    }
+
+    /* Make the card content more readable when focused */
+    figure:focus-within, figure:active {
+        transform: translateY(-4px) scale(1.01);
+    }
+}

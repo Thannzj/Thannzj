@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Malindang Biodiversity Watch</title>
+    <link rel="stylesheet" href="whatt.css">
+        <link rel="stylesheet" href="mobile-carousel.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <h1>Mt. Malindang Biodiversity Watch</h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#biodiversity">Biodiversity</a></li>
+                    <li><a href="#species">Endemic Species</a></li>
+                    <li><a href="#ecosystems">Ecosystems</a></li>
+                    <li><a href="#conservation">Conservation</a></li>
+                </ul>
+            </nav>
+            <button id="mode-toggle" aria-label="Toggle light and dark mode">☀️</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+
+            <div class="carousel-background">
+                <div class="carousel-track">
+                    <img class="carousel-slide" src="https://www.visitphilippines.org/wp-content/uploads/2016/04/Visit-Philippines-Malindang.jpg" alt="Mount Malindang North Peak">
+                    <img class="carousel-slide" src="https://www.aseanbiodiversity.org/wp-content/uploads/2024/03/BANNER-malindang001.jpg" alt="Mount Malindang Full Range">
+                    <img class="carousel-slide" src="https://mu.edu.ph/images/news/headlines/DENR_ASEAN_MU_partnered_advancing_protected_area_management.jpg" alt="Mount Malindang Forest">
+                </div>
+            </div>
+
+            <button class="carousel-btn prev" aria-label="Previous image">❮</button>
+            <button class="carousel-btn next" aria-label="Next image">❯</button>
+
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+
+            <div class="hero-content">
+                <h2>Guardian of the Mindanao Mid-Range</h2>
+                <p>Explore the unique and critical biodiversity of the Mount Malindang, a key protected area in the Philippines.</p>
+                <a href="#species" class="cta-button">Discover Species</a>
+            </div>
+        </section>
+
+        <section id="biodiversity" class="content-section">
+            <div class="container">
+                <h2>The Unique Biodiversity</h2>
+                <p>Mount Malindang is recognized as one of the most significant conservation sites in the Philippines, hosting a rich array of endemic flora and fauna that thrive in its diverse elevations and climates.</p>
+                <div class="grid-layout">
+                    <div class="card">
+                        <h3>High Endemism</h3>
+                        <p>A large percentage of species found here are unique to the Philippines or even to Malindang itself, highlighting its global ecological importance.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Water Source</h3>
+                        <p>The range serves as a vital watershed for the provinces of Misamis Occidental, Zamboanga del Norte, and Zamboanga del Sur.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Cultural Heritage</h3>
+                        <p>The mountain is the ancestral domain of the Subanen people, whose traditional knowledge is essential to conservation efforts.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Biodiversity Hotspot</h3>
+                        <p>Home to hundreds of bird species, amphibians, and insects, Mount Malindang ranks among the Philippines' most biodiverse protected areas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Tropical Climate Zones</h3>
+                        <p>Distinct elevation gradients create multiple microclimates, from warm lowlands to cool misty peaks, each supporting specialized species.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Threat & Conservation</h3>
+                        <p>Deforestation and climate change pose significant threats. Active protection and community engagement are vital to preserve this unique ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="species" class="content-section">
+            <div class="container">
+                <h2>🌿 Endemic Wildlife & Plants</h2>
+                <p>Meet some of the species that call the Malindang Range home. Their survival depends entirely on the health of this unique ecosystem.</p>
+                
+                <!-- Animals Section -->
+                <h3 style="text-align: center; margin-top: 50px; margin-bottom: 30px; color: var(--primary-color);">🐾 Animals</h3>
+                <div class="species-carousel-wrapper">
+                    <button class="carousel-nav-btn prev" data-carousel="animals">❮</button>
+                    <div class="species-carousel" id="animals-carousel">
+                        <div class="carousel-track-species">
+                            <figure>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/MINDANAO_LORIKEET_%28cropped%29.jpg/1200px-MINDANAO_LORIKEET_%28cropped%29.jpg" alt="Mount Malindang Lorikeet">
+                                <figcaption>
+                                    <h3>Malindang Lorikeet</h3>
+                                    <p>An endangered bird species unique to the area. Its vibrant plumage is a symbol of the mountain's natural beauty.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Rhacophorus_nigropalmatus.jpg/1200px-Rhacophorus_nigropalmatus.jpg" alt="Mindanao Flying Frog">
+                                <figcaption>
+                                    <h3>Mindanao Flying Frog</h3>
+                                    <p>One of the many unique amphibian species. It uses its large, webbed feet to glide between trees in the mossy forest.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://lazoo.org/wp-content/uploads/2023/05/Visayan-Warty-Pig-Female-JEP_9436.jpg" alt="Warty pig">
+                                <figcaption>
+                                    <h3>Warty Pig</h3>
+                                    <p>One of four known species in the pig genus endemic to the Philippines that are known for the facial warts on males.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2018/05/11141503/shrew.png" alt="Malindang Shrew">
+                                <figcaption>
+                                    <h3>Malindang Shrew</h3>
+                                    <p>A large shrew found in the subtropical or tropical dry forests of Mindanao, with a gray-brown body, a moderately long tail, and a longer snout than some related species.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/266806501/320" alt="Olive-capped Flowerpecker">
+                                <figcaption>
+                                    <h3>Olive-capped Flowerpecker</h3>
+                                    <p>A tiny bird species that plays a crucial role in pollination within the forest ecosystem.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiLVIYBvCMtlg4bS4Vf8R4i7Gf9AgdZgxiEw&s" alt="Philippine tarsier">
+                                <figcaption>
+                                    <h3>Philippine Tarsier</h3>
+                                    <p>A small nocturnal primate with large eyes; an iconic species of Philippine forests and an important indicator of habitat health.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://www.owlpages.com/owls/species/images/mindanao_scops_owl_rob_h_og.jpg" alt="Mindanao Scops Owl">
+                                <figcaption>
+                                    <h3>Mindanao Scops Owl</h3>
+                                    <p>A nocturnal raptor found in forested areas; it helps control insect and small mammal populations in the ecosystem.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <button class="carousel-nav-btn next" data-carousel="animals">❯</button>
+                </div>
+                
+                <!-- Plants Section -->
+                <h3 style="text-align: center; margin-top: 50px; margin-bottom: 30px; color: var(--primary-color);">🌱 Plants</h3>
+                <div class="species-carousel-wrapper">
+                    <button class="carousel-nav-btn prev" data-carousel="plants">❮</button>
+                    <div class="species-carousel" id="plants-carousel">
+                        <div class="carousel-track-species">
+                            <figure>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Rafflesia_arnoldii%2C_Sumatra.jpg" alt="Rafflesia schadenbergiana">
+                                <figcaption>
+                                    <h3>Rafflesia schadenbergiana</h3>
+                                    <p>One of the largest flowers in the world, this rare parasite is a highlight of the Malindang flora and a conservation priority.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://i.natgeofe.com/k/2ed74677-f079-44a1-a3b3-30fad83edab5/a-8-carnivorous-plants-pitcher-plants.jpg?wp=1&w=1084.125&h=721.875" alt="Pitcher Plant">
+                                <figcaption>
+                                    <h3>Pitcher Plant (Nepenthes)</h3>
+                                    <p>A carnivorous plant endemic to Southeast Asia, featuring distinctive pitcher-shaped leaves that trap and digest insects for nutrition.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://farm9.staticflickr.com/8066/8232275217_610fbc3a83_o.jpg" alt="Philippine Orchid">
+                                <figcaption>
+                                    <h3>Philippine Orchid (Phalaenopsis)</h3>
+                                    <p>A stunning flowering orchid species native to the Philippines, known for its elegant blooms and important role in the forest canopy ecosystem.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://cdn.shopify.com/s/files/1/0557/4269/3571/files/calamansi-tree_1_1024x1024.jpg?v=1700054185" alt="Calamansi">
+                                <figcaption>
+                                    <h3>Calamansi (Citrus microcarpa)</h3>
+                                    <p>A small citrus fruit tree endemic to the Philippines, producing aromatic and sour fruits widely used in local cuisine and traditional medicine.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://t3.ftcdn.net/jpg/04/67/49/80/360_F_467498090_8YnSMqiD5RseDDyOQWhQDijlIWEGZuIj.jpg" alt="Creeping Beggarweed">
+                                <figcaption>
+                                    <h3>Creeping Beggarweed (Desmodium triflorum)</h3>
+                                    <p>A low-growing legume plant found throughout the Philippines, playing a crucial role in nitrogen fixation and soil enrichment in forest ecosystems.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <button class="carousel-nav-btn next" data-carousel="plants">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecosystems" class="content-section inverted-bg">
+            <div class="container">
+                <h2>🌳 Forest Ecosystems</h2>
+                <p>The mountain's altitude creates distinct zones, each supporting a unique biome.</p>
+                <div class="ecosystem-cards">
+                    <figure class="eco-card">
+                        <img src="https://cdn.arcgis.com/sharing/rest/content/items/5ea6c736d86843cc9c52b91b88b82500/resources/3CneXAyYuBWEUW9BAe720.jpeg?w=400" alt="Lowland Dipterocarp Forest">
+                        <figcaption>
+                            <h3>Lowland Dipterocarp Forest</h3>
+                            <p>Found at lower elevations. Characterized by tall trees like the Dipterocarps and a dense canopy.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="eco-card">
+                        <img src="https://www.aseanbiodiversity.org/wp-content/uploads/2024/03/DSC03552-scaled.jpg" alt="Montane Forest">
+                        <figcaption>
+                            <h3>Montane Forest</h3>
+                            <p>Intermediate elevations with smaller, gnarled trees, and a high presence of epiphytes like orchids and ferns.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="eco-card">
+                        <img src="https://preview.redd.it/mt-malindang-north-peak-v0-9tx8723lujaf1.jpg?width=640&crop=smart&auto=webp&s=a27eb98330b1d286adec4264cc860baf4058bba1" alt="Mossy Cloud Forest">
+                        <figcaption>
+                            <h3>Mossy/Cloud Forest</h3>
+                            <p>The highest zone, constantly shrouded in mist. Trees are heavily laden with moss and liverworts, creating an ethereal landscape.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="conservation" class="content-section">
+            <div class="container">
+                <h2>🤝 Conservation Efforts</h2>
+                <p>Active community-based and governmental programs are crucial for the long-term sustainability of the park.</p>
+                <ul>
+                    <li>Anti-Poaching Patrols: Organized teams monitor the range to prevent illegal hunting and logging.</li>
+                    <li>Reforestation Projects: Focusing on planting endemic species to restore degraded areas, particularly in the buffer zones.</li>
+                    <li>Community Education: Programs to engage local communities and indigenous groups in biodiversity monitoring and protection.</li>
+                    <li>Ecotourism Regulation: Developing sustainable tourism practices to benefit locals while minimizing environmental impact.</li>
+                    <li>Collaboration forged between Department of Environment and Natural Resources and Misamis University for Marine Ecosystem and Coastal Biodiversity Protection</li>
+                    <li>Misamis University Established Two Hectares Permanent Monitoring Plot in the Southern Part of Mt. Malindang Range Natural Park in Collaboration with DENR 10. </li>
+                    <li>Misamis University was contracted by the DENR-MMRNP PAMB to identify a 60 km Management Zone inside Mt. Malindang Range Natural Park, Misamis Occidental.</li>
+                    <li>DENR and ASEAN Centre for Biodiversity (ACB) has partnered with Misamis University in advancing for effective protected area management: The MMRNP Protected Area Management Plan 2022-2032</li>
+                </ul>
+
+                <div id="comments-section" class="comments-section">
+                    <h3>Comments</h3>
+
+                    <form id="comment-form" class="comment-form">
+                        <div class="form-row">
+                            <label for="comment-name">Name</label>
+                            <input id="comment-name" name="name" type="text" placeholder="Your name" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="comment-text">Comment</label>
+                            <textarea id="comment-text" name="text" rows="3" placeholder="Share your thoughts..." required></textarea>
+                        </div>
+                        <div class="form-row rating-row">
+                            <label>Rating</label>
+                            <div id="star-rating" class="stars" role="radiogroup" aria-label="Star rating">
+                                <span class="star" data-value="1" role="radio" aria-checked="false">☆</span>
+                                <span class="star" data-value="2" role="radio" aria-checked="false">☆</span>
+                                <span class="star" data-value="3" role="radio" aria-checked="false">☆</span>
+                                <span class="star" data-value="4" role="radio" aria-checked="false">☆</span>
+                                <span class="star" data-value="5" role="radio" aria-checked="false">☆</span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="submit" class="cta-button small">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <div id="comments-list" class="comments-list">
+                    </div>
+                </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mount Malindang Biodiversity. By Group 5.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="carousel.js"></script>
+    <script src="comments.js"></script>
+    <script src="nav-highlight.js"></script>
+    <script src="species-carousel.js"></script>
+    <script src="eco-carousel.js"></script>
+</body>
+</html>
